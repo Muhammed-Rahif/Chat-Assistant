@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to right,
+    rgb(55, 52, 218),
+    rgb(162, 0, 255)
+  );
+}
+.chat-box {
+  min-width: 280px;
+  min-height: 180px;
+  width: 95vw;
+  height: 90vh;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+/* CSS talk bubble */
+.talk-bubble {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  min-width: 40px;
+  height: auto;
+  padding: 1em;
+  background-color: lightyellow;
+  font-family: sans-serif;
+  opacity: 0.85; 
+}
+.round {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+}
+.right-top:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -40px;
+  top: -8px;
+  bottom: auto;
+  border-color: #666 transparent transparent transparent;
+}
+.right-top:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -20px;
+  top: 0px;
+  bottom: auto;
+  border: 28px solid;
+  border-color: lightyellow transparent transparent transparent;
+}
+.left-top:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: auto;
+  left: -40px;
+  top: -8px;
+  bottom: auto;
+  border-color: #666 transparent transparent transparent;
+}
+.left-top:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: auto;
+  left: -20px;
+  top: 0px;
+  bottom: auto;
+  border: 28px solid;
+  border-color: lightyellow transparent transparent transparent;
+}
+
