@@ -19,7 +19,6 @@
       crossorigin="anonymous"
     />
     <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-    
   </head>
   <body>
     <div class="bg">
@@ -28,9 +27,8 @@
           <div class="col-md-12">
             <div class="talk-bubble tri-right round right-top">
               <div class="talktext">
-                <p>
-                  And finally on the right flush at the top. Uses .round .border
-                  and .right-top
+                <p id="user-chat">
+                  ...............................................................
                 </p>
               </div>
             </div>
@@ -38,9 +36,8 @@
           <div class="col-md-12">
             <div class="talk-bubble tri-right round left-top">
               <div class="talktext">
-                <p>
-                  And finally on the right flush at the top. Uses .round .border
-                  and .right-top
+                <p id="bot-chat">
+                  Hai I am Chat bot. Say 'Hi' to me...!
                 </p>
               </div>
             </div>
@@ -50,7 +47,6 @@
         <div class="col-md-12 type-area">
           <hr class="hr" />
           <div class="form__group field">
-            <form>
               <input
                 type="input"
                 class="form__field"
@@ -60,10 +56,9 @@
                 required
               />
               <label for="name" class="form__label">Send message</label>
-              <button class="btn-submit" type="submit" onclick="sendMsg()">
+              <button class="btn-submit" onclick="sendMsg()">
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
               </button>
-            </form>
           </div>
         </div>
       </section>
