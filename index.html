@@ -36,9 +36,7 @@
           <div class="col-md-12">
             <div class="talk-bubble tri-right round left-top">
               <div class="talktext">
-                <p id="bot-chat">
-                  Hai I am Chat bot. Say 'Hi' to me...!
-                </p>
+                <p id="bot-chat">Hai I am Chat bot. Say 'Hi' to me...!</p>
               </div>
             </div>
           </div>
@@ -47,6 +45,7 @@
         <div class="col-md-12 type-area">
           <hr class="hr" />
           <div class="form__group field">
+            <form>
               <input
                 type="input"
                 class="form__field"
@@ -56,14 +55,16 @@
                 required
               />
               <label for="name" class="form__label">Send message</label>
-              <button class="btn-submit" onclick="sendMsg()">
+              <button class="btn-submit" type="submit" onclick="sendMsg()">
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
               </button>
+            </form>
           </div>
         </div>
       </section>
     </div>
-<script src="./Functions/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Functions/app.js"></script>
     <script src="./Styles/style.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
@@ -75,5 +76,7 @@
       integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./node_modules/talkify-tts/dist/talkify.min.js"></script>
   </body>
 </html>
