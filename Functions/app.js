@@ -1,5 +1,5 @@
 function respondBot(msg) {
-  msg=msg.toLowerCase();
+  msg = msg.toLowerCase();
   if (msg === "hi") {
     return "Hello!";
   } else if (msg === "") {
@@ -12,43 +12,48 @@ function respondBot(msg) {
     return "That's a boy called 'Rahif'";
   } else if (msg === "Hello") {
     return "Hey!";
-  } 
-  
-  
+  }
+
+
   else {
-    return "I am confused...!";
+    return false;
   }
 }
-
-$(document).ready(()=>{
+$(document).ready(() => {
   $('form').submit(false);
   startSpeech();
 })
 
-function sendMsg() {
+async function sendMsg() {
   var time = moment().format("MMMM Do YYYY, h:mm:ss a");
   var msg = document.getElementById("text-message").value;
 
   document.getElementById("user-chat").innerHTML = msg;
 
-  let response = respondBot(msg);
-  document.getElementById("bot-chat").innerHTML = response;
+  let response = await respondBot(msg);
+  if (response) {
+    document.getElementById("bot-chat").innerHTML = response;
+    await textSpeech(response);
+  } else {
+    await textSpeech(false);
+    window.location.href = "https://google.com/search?q=" + msg + "&btnI=I+am+Feeling+Lucky"
+  }
 
-  textSpeech();
 }
 
-function textSpeech() {
+function textSpeech(text) {
   var player = new talkify.Html5Player();
-  var msg = document.getElementById("text-message").value;
-  let text = respondBot(msg);
-  player.playText(text);
+  if (text) {
+    player.playText(text);
+  } else {
+    player.playText("Redirecting...!");
+    document.getElementById("bot-chat").innerHTML = "Redirecting...!";
+  }
 }
 
 
 
 function startSpeech() {
   var player = new talkify.Html5Player();
-  var msg = document.getElementById("text-message").value;
-  let text = respondBot(msg);
   player.playText("Hai I am Chat bot. Say 'Hi' to me...!");
 }
