@@ -3,6 +3,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+*{
+  font-family: 'Quicksand',sans-serif;
+}
 .bg {
   height: 100vh;
   width: 100vw;
@@ -11,6 +14,21 @@ body {
     rgb(55, 52, 218),
     rgb(162, 0, 255)
   );
+}
+.you{
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 90%;
+  font-family: sans-serif;
+  color: #116AFF;
+  height: 20px;
+}
+.yout{
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 80%;
+  font-family: sans-serif;
+  color: #006CD6;
 }
 .chat-box {
   min-width: 280px;
@@ -44,15 +62,45 @@ body {
   min-width: 40px;
   height: auto;
   padding: 1em;
-  background-color: lightyellow;
+  background-color: white;
   font-family: sans-serif;
   opacity: 0.85;
+}
+.opacity{
+  opacity: 70%;
+}
+.button-top{
+  background: #FFFFFF66;
+  color: whitesmoke;
+  opacity: 95%;
+  border: transparent;
+  border-radius: 5px;
+  width: 40px;
+  height: 30px;
+  margin-left: 85%;
+}
+.max {
+  overflow: scroll;
+  display: none;
+}
+#loader {
+ border: 16px solid #f3f3f3; /* Light grey */
+ border-top: 16px solid #3498db;/* Blue */
+ border-radius: 50%;
+ width: 120px;
+ height: 120px;
+ margin: auto;
+ animation: spin 2s linear infinite;
+}
+@keyframes spin {
+ 0%{transform:rotate(0deg);}
+ 100%{transform:rotate(360deg);}
 }
 .round {
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
-}
+}/*
 .right-top:before {
   content: " ";
   position: absolute;
@@ -98,16 +146,27 @@ body {
   bottom: auto;
   border: 28px solid;
   border-color: lightyellow transparent transparent transparent;
-}
+}*/
 .hr {
   width: 80vw;
   margin: auto;
   border: solid #9b9b9b;
 }
+.bgA{
+   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   background-color: rgba(255, 255, 255, 0.15);
+   backdrop-filter: blur(5px);
+}
 .type-area {
   top: auto;
   z-index: 100;
   margin-top: 3em;
+}
+.user{
+  width: 65%;
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 
 .form__group {
@@ -169,6 +228,13 @@ body {
 .form__field:invalid {
   box-shadow: none;
 }
+.input{
+  border-radius: 8px;
+  border: #6B6B6B4D;
+  margin: 0.5rem;
+  margin-left: 4rem;
+  width: 80%;
+}
 .btn-submit {
   background: transparent;
   border: transparent;
@@ -176,6 +242,9 @@ body {
   background: violet;
   right: 0;
   position: absolute;
+  margin-right: 3.5rem;
+  width: px;
+  height: 40px;
   transition: .6s;
   padding: 7px;
   border-radius: 50%;
@@ -192,4 +261,13 @@ body {
   background: violet;
   outline: none;
   border: none;
+}
+@media only screen and (max-width: 600px){
+  .input{
+  border-radius: 8px;
+  border: #6B6B6B4D;
+  margin: 0.2rem;
+  margin-left: 2rem;
+  width: 80%;
+}
 }
